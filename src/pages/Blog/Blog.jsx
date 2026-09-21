@@ -828,7 +828,7 @@ export default function Blog() {
                       className={`relative  overflow-hidden ${veiwMode === `list` ? "rounded-r-3xl w-[37%]" : `rounded-t-3xl`}`}
                     >
                       <img
-                        className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover ${veiwMode === `list` ? `rounded-r-3xl ` : `rounded-t-3xl h-52`}`}
+                        className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover ${veiwMode === `list` ? `rounded-r-3xl ` : `rounded-t-3xl w-full h-52`}`}
                         src={current.image}
                         alt={current.slug}
                       />

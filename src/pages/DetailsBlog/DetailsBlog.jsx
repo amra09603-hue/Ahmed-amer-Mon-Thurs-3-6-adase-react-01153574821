@@ -1090,9 +1090,9 @@ export default function DetailsBlog() {
                   className="col-span-4 group mb-10  bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs"
                 >
                   <Link to={`/blog/${current.slug}`}>
-                    <div className="relative overflow-hidden rounded-t-3xl ">
+                    <div className="relative overflow-hidden w-full rounded-t-3xl ">
                       <img
-                        className="rounded-t-3xl hover:-translate-y-3 duration-300 h-52 group-hover:shadow-2xl group-hover:scale-110 duration-500 group-hover:object-cover object-cover"
+                        className="rounded-t-3xl hover:-translate-y-3 w-full h-52 group-hover:shadow-2xl group-hover:scale-110 duration-500  object-cover"
                         src={current.image}
                         alt={current.slug}
                       />

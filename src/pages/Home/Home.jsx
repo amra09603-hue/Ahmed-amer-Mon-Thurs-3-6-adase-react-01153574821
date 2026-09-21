@@ -713,7 +713,7 @@ export default function Home() {
                 <span className="block font-semibold text-3xl">4</span>
                 <span className="text-sm text-gray-600">تصنيفات</span>
               </div>
-              <div className="text-orange-400 hover:scale-105 duration-300 py-3 px-14 text-2xl rounded-2xl bg-mist-900/60 border border-gray-500/30">
+              <div className="text-orange-400 hover:scale-105 duration-300 py-3 px-16 text-2xl rounded-2xl bg-mist-900/60 border border-gray-500/30">
                 <FaPenNib className="mb-1 text-orange-500" />
                 <span className="block font-semibold text-3xl">6</span>
                 <span className="text-sm text-gray-600">كاتب</span>
@@ -927,9 +927,9 @@ export default function Home() {
               .map((current) => (
                 <div className="col-span-4 group hover:-translate-y-3 duration-300 bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
                   <Link to={`/blog/${current.slug}`}>
-                    <div className="relative overflow-hidden rounded-t-3xl ">
+                    <div className="relative w-full overflow-hidden rounded-t-3xl ">
                       <img
-                        className="rounded-t-3xl h-52 group-hover:shadow-2xl group-hover:scale-110 duration-500 group-hover:object-cover object-cover"
+                        className="rounded-t-3xl w-full h-52 group-hover:shadow-2xl group-hover:scale-110 duration-500  object-cover"
                         src={current.image}
                         alt={current.slug}
                       />

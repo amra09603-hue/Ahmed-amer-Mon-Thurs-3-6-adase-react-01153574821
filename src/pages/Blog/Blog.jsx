@@ -825,7 +825,7 @@ export default function Blog() {
                     to={`/blog/${current.slug}`}
                   >
                     <div
-                      className={`relative overflow-hidden ${veiwMode === `list` ? "rounded-r-3xl w-[37%]" : `rounded-t-3xl`}`}
+                      className={`relative  overflow-hidden ${veiwMode === `list` ? "rounded-r-3xl w-[37%]" : `rounded-t-3xl`}`}
                     >
                       <img
                         className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover ${veiwMode === `list` ? `rounded-r-3xl ` : `rounded-t-3xl h-52`}`}
@@ -838,7 +838,7 @@ export default function Blog() {
                     </div>
 
                     <div
-                      className={`sm:p-7 md:p-8 md:pb-10  lg:p-7 lg:pb-11 bg-zinc-900/80  ${veiwMode === `list` ? "rounded-l-3xl w-2/3" : `rounded-b-3xl`}`}
+                      className={`sm:p-7 md:p-8 md:pb-10  lg:p-7 lg:pb-11 bg-zinc-900/80  ${veiwMode === `list` ? "rounded-l-3xl  w-2/3 h-52 " : `rounded-b-3xl`}`}
                     >
                       <div className=" mb-3 text-[12px] text-gray-200/50">
                         <i className="fa-regular fa-clock ml-1"></i>

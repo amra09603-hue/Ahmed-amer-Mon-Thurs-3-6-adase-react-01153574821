@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body::selection {
+  color: white;
+  background-color: rgb(255, 128, 0);
+}
+body {
+  font-family: "Tajawal", sans-serif;
+}
+nav .active{
+  background-color: rgb(255, 95, 0);
+  color: white;
+  border-radius: 30px;
+}
+.jbh{
+  color:#07030115;
+}

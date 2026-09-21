@@ -820,12 +820,12 @@ export default function Blog() {
                     className={`${
                       veiwMode === `list`
                         ? `flex flex-col md:flex-row items-stretch min-h-[220px]`
-                        : `flex flex-col h-full`
+                        : `flex flex-col h-full hover:-translate-y-2 transition-transform duration-300`
                     }`}
                     to={`/blog/${current.slug}`}
                   >
                     <div
-                      className={`    ${veiwMode === `list` ? "w-full relative md:w-1/3 h-56 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `w-full relative h-52 shrink-0 overflow-hidden rounded-t-3xl`}`}
+                      className={`${veiwMode === `list` ? "w-full  md:w-1/3 h-56 md:h-auto shrink-0 relative overflow-hidden rounded-r-3xl " : `w-full  h-52 shrink-0 relative overflow-hidden rounded-t-3xl`}`}
                     >
                       <img
                         className=" w-full h-full group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover "

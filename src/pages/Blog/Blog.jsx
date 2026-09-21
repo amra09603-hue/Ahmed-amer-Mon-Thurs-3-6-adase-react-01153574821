@@ -819,16 +819,16 @@ export default function Blog() {
                   <Link
                     className={`${
                       veiwMode === `list`
-                        ? `flex items-center justify-between`
-                        : `hover:-translate-y-3 duration-300`
+                        ? `flex flex-col md:flex-row items-stretch min-h-[220px]`
+                        : `flex flex-col hover:-translate-y-3 duration-300`
                     }`}
                     to={`/blog/${current.slug}`}
                   >
                     <div
-                      className={`relative  overflow-hidden ${veiwMode === `list` ? "rounded-r-3xl w-[37%]" : `rounded-t-3xl`}`}
+                      className={`relative  overflow-hidden w-full ${veiwMode === `list` ? "md:w-1/3 h-56 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `h-48 rounded-t-3xl`}`}
                     >
                       <img
-                        className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover ${veiwMode === `list` ? `rounded-r-3xl ` : `rounded-t-3xl w-full h-52`}`}
+                        className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover h-full ${veiwMode === `list` ? `rounded-r-3xl w-full` : `rounded-t-3xl w-full h-52`}`}
                         src={current.image}
                         alt={current.slug}
                       />
@@ -838,7 +838,7 @@ export default function Blog() {
                     </div>
 
                     <div
-                      className={`sm:p-7 md:p-8 md:pb-10  lg:p-7 lg:pb-11 bg-zinc-900/80  ${veiwMode === `list` ? "rounded-l-3xl  w-[69%] h-[50%] " : `rounded-b-3xl`}`}
+                      className={`p-6 flex flex-col justify-between bg-zinc-900/80  ${veiwMode === `list` ? "w-full rounded-l-3xl  " : `w-full md:w-2/3 rounded-b-3xl`}`}
                     >
                       <div className=" mb-3 text-[12px] text-gray-200/50">
                         <i className="fa-regular fa-clock ml-1"></i>

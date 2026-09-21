@@ -851,7 +851,7 @@ export default function About() {
           <span className="block">التحية، لا تتردد في التواصل.</span>
         </p>
         <button className="text-white cursor-pointer hover:-translate-y-1 duration-300 bg-black px-7 py-4 font-semibold rounded-xl ml-4 mt-7">
-          <i class="fa-regular fa-envelope ml-2"></i>
+          <i className="fa-regular fa-envelope ml-2"></i>
           تواصل معنا
         </button>
         <Link to="blog">

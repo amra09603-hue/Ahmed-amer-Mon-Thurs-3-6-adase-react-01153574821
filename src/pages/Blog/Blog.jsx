@@ -646,13 +646,17 @@ export default function Blog() {
   let [data] = allData;
   let { posts, categories, siteInfo } = data;
 
+  window.scrollTo({
+    top:0,
+    behavior: "smooth"
+  })
   // Search input
   const [searchInput, setSearchInput] = useState(``);
 
   const [currentBage, setCurrentBage] = useState(1);
-  let postsPage = 6;
+  let itemsPostsPage = 6;
 
-  // filter bottons
+  // filter bottons   and   filter category   and   filter search
   const [srearchParems, setSrearchParems] = useSearchParams();
   let categoryForm = srearchParems.get(`category`);
 
@@ -666,23 +670,19 @@ export default function Blog() {
       filter.title.toLowerCase().includes(searchInput.toLowerCase()) ||
       filter.category.toLowerCase().includes(searchInput.toLowerCase());
 
-      return matchesCategory  && matchesSearch
+    return matchesCategory && matchesSearch;
   });
 
   useEffect(() => {
     setCurrentBage(1);
+  }, [activeCategory, searchInput]);
 
-  },[activeCategory, searchInput]);
+  let startPost = (currentBage - 1) * itemsPostsPage;
+  let endPost = startPost + itemsPostsPage;
 
-  let lastPost = currentBage * postsPage;
-  let firstPost = lastPost - postsPage;
+  let currentPages = filterPosts.slice(startPost, endPost);
+  let totalPages = [1, 2, 3, 4, 5];
 
-  let currentPosts = filterPosts.slice(firstPost, lastPost);
-  let totalPage = Math.ceil(filterPosts.length / postsPage);
-  
-
-
-  let visible = filterPosts.slice(0, 6);
 
   //count
   let bigCurrentCount = categories.find(
@@ -692,9 +692,6 @@ export default function Blog() {
 
   //grid or last
   const [veiwMode, setVeiwMode] = useState(`grid`);
-
-
-  
 
   return (
     <>
@@ -720,7 +717,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
-
+      {/*  display data section */}
       <section className="relative w-full bg-neutral-950 pt-5 pb-14">
         <div className="absolute inset-0  bg-[radial-gradient(circle_800px_at_10%_200px,#f9731615,transparent)] pointer-events-none" />
         <div className="container relative mx-auto text-white  ">
@@ -817,7 +814,7 @@ export default function Blog() {
               }
               `}
             >
-              {visible.map((current) => (
+              {currentPages.map((current) => (
                 <div className=" group  bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
                   <Link
                     className={`${
@@ -885,32 +882,27 @@ export default function Blog() {
               ))}
             </div>
           </div>
-            <div className="flex items-center justify-center gap-1 mt-14 mb-5">
-              <div className="text-gray-500/40 bg-gray-600/5 border border-gray-500/20 py-2 px-3 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer ">
-                <i className="fa-solid fa-chevron-right"></i>
-              </div>
-              <span className="text-gray-300/50 bg-gray-600/20 border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer">
-                1
-              </span>
-              <span className="text-gray-300/50 bg-gray-600/20 border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer">
-                2
-              </span>
-              <span className="text-gray-300/50 bg-gray-600/20 border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer">
-                3
-              </span>
-              <span className="text-gray-300/50 bg-gray-600/20 border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer">
-                4
-              </span>
-              <span className="text-gray-300/50 bg-gray-600/20 border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer">
-                5
-              </span>
-              <div className="text-white bg-gray-600/20 border border-gray-500/20 py-2 px-3 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer  ">
-                <i className="fa-solid fa-chevron-left"></i>
-              </div>
+          <div className="flex items-center justify-center gap-1 mt-14 mb-5">
+            <div className="text-gray-500/40 bg-gray-600/5 border border-gray-500/20 py-2 px-3 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer ">
+              <i className="fa-solid fa-chevron-right"></i>
             </div>
-            <p className="text-gray-300/40 text-center">
-              صفحة <span>1</span> من 5
-            </p>
+            {totalPages.map((pageNumber) => (
+              <button
+                key={pageNumber}
+                onClick={() => setCurrentBage(pageNumber)}
+                className={` border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer ${currentBage === pageNumber ? `text-white  bg-orange-500` : "text-gray-300/50 bg-gray-600/20"}`}
+              >
+                {pageNumber}
+              </button>
+            ))}
+
+            <div className="text-white bg-gray-600/20 border border-gray-500/20 py-2 px-3 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer  ">
+              <i className="fa-solid fa-chevron-left"></i>
+            </div>
+          </div>
+          <p className="text-gray-300/40 text-center">
+            صفحة <span>1</span> من 5
+          </p>
         </div>
       </section>
     </>

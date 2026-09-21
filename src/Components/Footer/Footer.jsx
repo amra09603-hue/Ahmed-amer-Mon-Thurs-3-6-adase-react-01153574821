@@ -697,7 +697,7 @@ export default function Footer() {
               <div className="text-white font-semibold text-xl">استكشف</div>
             </div>
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -707,7 +707,7 @@ export default function Footer() {
             </div>
 
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -717,7 +717,7 @@ export default function Footer() {
             </div>
 
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -733,7 +733,7 @@ export default function Footer() {
               <div className="text-white font-semibold text-xl">التصنيفات</div>
             </div>
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -743,7 +743,7 @@ export default function Footer() {
             </div>
 
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -753,7 +753,7 @@ export default function Footer() {
             </div>
 
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""
@@ -763,7 +763,7 @@ export default function Footer() {
             </div>
 
             <div className="group pr-1 my-6">
-              <i class="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
+              <i className="fa-solid fa-chevron-left text-sm opacity-0 group-hover:opacity-100  group-hover:text-orange-500"></i>
               <Link
                 className=" text-sm pr-1 duration-300 group-hover:text-orange-500 group-hover:-translate-x-3 inline-block"
                 to=""

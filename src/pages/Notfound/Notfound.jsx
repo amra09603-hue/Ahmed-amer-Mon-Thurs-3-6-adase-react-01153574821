@@ -12,8 +12,8 @@ export default function Notfound() {
           <div className="text-[190px] font-semibold  text-orange-400 ">
             404
           </div>
-          <i class="fa-regular fa-face-frown relative font-medium text-6xl text-orange-400 block py-10 px-10 border border-amber-600  pl-[100px] rounded-full bg-amber-500/15">
-            <i class="fa-solid fa-square fa-bounce text-2xl text-orange-500 absolute right-[-10px] top-0"></i>
+          <i className="fa-regular fa-face-frown relative font-medium text-6xl text-orange-400 block py-10 px-10 border border-amber-600  pl-[100px] rounded-full bg-amber-500/15">
+            <i className="fa-solid fa-square fa-bounce text-2xl text-orange-500 absolute right-[-10px] top-0"></i>
             <i className="fa-solid fa-circle fa-fade text-xl  text-orange-400 absolute left-[-10px] bottom-[-10px]"></i>
           </i>
           <div className="text-white text-3xl my-5 font-semibold">
@@ -25,13 +25,13 @@ export default function Notfound() {
           </div>
           <Link to="/">
             <button className="text-white cursor-pointer hover:-translate-y-1 duration-300 bg-orange-500 px-6 py-4 font-semibold rounded-full ml-4 mt-7">
-              <i class="fa-regular fa-house ml-1"></i>
+              <i className="fa-regular fa-house ml-1"></i>
               الذهاب للرئسية
             </button>
           </Link>
           <Link to="/blog">
             <button className="text-white cursor-pointer group hover:border-amber-500 hover:bg-amber-600/20 hover:text-black   bg-transparent border border-gray-200/20 px-6 py-4 font-semibold rounded-full mt-7">
-              <i class="fa-regular fa-newspaper ml-1 group-hover:text-orange-500"></i>
+              <i className="fa-regular fa-newspaper ml-1 group-hover:text-orange-500"></i>
               <span className="group-hover:text-orange-500">
                 {" "}
                 تصفح المقالات

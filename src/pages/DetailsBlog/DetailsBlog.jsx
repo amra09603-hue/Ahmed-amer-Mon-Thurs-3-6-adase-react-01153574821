@@ -651,7 +651,7 @@ export default function DetailsBlog() {
   let [data] = allData;
   let { posts, categories, siteInfo } = data;
 
-  // dynamic url
+  // dynamic url and currentt obj back from url
   const { slug } = useParams();
   let currentt = posts.find((item) => item.slug === slug);
   if (!currentt) {
@@ -691,7 +691,7 @@ export default function DetailsBlog() {
 
   // date
   let date = currentt.date;
-  let newDtae = new Date(date).toLocaleDateString(`ar-EG`, {
+  let newDate = new Date(date).toLocaleDateString(`ar-EG`, {
     day: `numeric`,
     month: `long`,
     year: `numeric`,
@@ -755,9 +755,9 @@ export default function DetailsBlog() {
 
       {/*  Data Section */}
       <section className="bg-black/96 py-12">
-        <div className="relative grid grid-cols-12 w-[87%] mx-auto gap-3 px-14">
-          <div className="col-span-9 text-white px-8">
-            <div className="border mb-11 text-white italic p-6 text-lg border-orange-500/30 bg-amber-500/10 rounded-2xl">
+        <div className="relative grid grid-cols-12 w-[87%] scroll-smooth mx-auto gap-3 px-14">
+          <div className="col-span-9  text-white px-8">
+            <div className="border mb-11  text-white italic p-6 text-lg border-orange-500/30 bg-amber-500/10 rounded-2xl">
               " {currentt.excerpt}"
             </div>
             <div className="text-lg text-gray-300 mb-16">
@@ -767,7 +767,10 @@ export default function DetailsBlog() {
               <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-camera"></i>
               </div>
-              <span className="text-3xl mr-5 font-semibold">
+              <span
+                id="section-1"
+                className="text-3xl scroll-mt-24  mr-5 font-semibold"
+              >
                 {itemsArray[1].content}
               </span>
               <div className="text-lg text-gray-300 mt-6 mb-14">
@@ -778,7 +781,10 @@ export default function DetailsBlog() {
               <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-camera"></i>
               </div>
-              <span className="text-3xl mr-5 font-semibold">
+              <span
+                id="section-2"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
                 {itemsArray[3].content}
               </span>
               <div className="text-lg text-gray-300 mt-6 mb-14">
@@ -789,7 +795,10 @@ export default function DetailsBlog() {
               <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-camera"></i>
               </div>
-              <span className="text-3xl mr-5 font-semibold">
+              <span
+                id="section-3"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
                 {itemsArray[5].content}
               </span>
               <div className="text-lg text-gray-300 mt-6 mb-14">
@@ -800,7 +809,10 @@ export default function DetailsBlog() {
               <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-camera"></i>
               </div>
-              <span className="text-3xl mr-5 font-semibold">
+              <span
+                id="section-4"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
                 {itemsArray[7].content}
               </span>
               <div className="text-lg text-gray-300 mt-6 mb-14">
@@ -811,11 +823,42 @@ export default function DetailsBlog() {
               <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-camera"></i>
               </div>
-              <span className="text-3xl mr-5 font-semibold">
+              <span
+                id="section-5"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
                 {itemsArray[9].content}
               </span>
               <div className="text-lg text-gray-300 mt-6 mb-14">
                 {itemsArray[10].content}
+              </div>
+            </div>
+            <div>
+              <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
+                <i className="fa-solid fa-camera"></i>
+              </div>
+              <span
+                id="section-6"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
+                {itemsArray[11].content}
+              </span>
+              <div className="text-lg text-gray-300 mt-6 mb-14">
+                {itemsArray[12].content}
+              </div>
+            </div>
+            <div>
+              <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
+                <i className="fa-solid fa-camera"></i>
+              </div>
+              <span
+                id="section-7"
+                className="text-3xl scroll-mt-24 mr-5 font-semibold"
+              >
+                {itemsArray[13].content}
+              </span>
+              <div className="text-lg text-gray-300 mt-6 mb-14">
+                {itemsArray[14].content}
               </div>
             </div>
             <div className="text-xl border border-gray-500/20 rounded-2xl p-7 bg-gray-700/20">
@@ -894,7 +937,7 @@ export default function DetailsBlog() {
               </div>
             </div>
           </div>
-          <div className="col-span-3 sticky top-28 self-start">
+          <div className="col-span-3 sticky top-24 self-start">
             <div className="border border-gray-500/20 rounded-2xl p-7 bg-gray-700/20">
               <div className=" p-2 text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-list"></i>
@@ -902,48 +945,78 @@ export default function DetailsBlog() {
               <span className="text-white  font-semibold mr-3">
                 محتويات المقال
               </span>
-              <div className="mt-10 pr-3 text-[13px]">
-                <div className=" py-1.5 px-3 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                  1
+              <a href="#section-1" >
+                <div className="mt-12 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    1
+                  </div>
+                  <span className="text-white/40 mr-3">
+                    {itemsArray[1].content}
+                  </span>
                 </div>
-                <span className="text-white/40  font-semibold mr-3">
-                  {itemsArray[1].content}
-                </span>
-              </div>
-              <div className="mt-8 pr-3 text-[13px]">
-                <div className=" py-1.5 px-3 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                  2
+              </a>
+              <a href="#section-2" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    2
+                  </div>
+                  <span className="text-white/40  mr-3">
+                    {itemsArray[3].content}
+                  </span>
                 </div>
-                <span className="text-white/40  font-semibold mr-3">
-                  {itemsArray[3].content}
-                </span>
-              </div>
-              <div className="mt-8 pr-3 text-[13px]">
-                <div className=" py-1.5 px-3 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                  3
+              </a>
+              <a href="#section-3" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    3
+                  </div>
+                  <span className="text-white/40 mr-3">
+                    {itemsArray[5].content}
+                  </span>
                 </div>
-                <span className="text-white/40  font-semibold mr-3">
-                  {itemsArray[5].content}
-                </span>
-              </div>
-              <div className="mt-8 pr-3 text-[13px]">
-                <div className=" py-1.5 px-3 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                  4
+              </a>
+              <a href="#section-4" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    4
+                  </div>
+                  <span className="text-white/40  mr-3">
+                    {itemsArray[7].content}
+                  </span>
                 </div>
-                <span className="text-white/40  font-semibold mr-3">
-                  {itemsArray[7].content}
-                </span>
-              </div>
-              <div className="mt-8 pr-3 text-[13px]">
-                <div className=" py-1.5 px-3 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                  5
+              </a>
+              <a href="#section-5" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    5
+                  </div>
+                  <span className="text-white/40  mr-3">
+                    {itemsArray[9].content}
+                  </span>
                 </div>
-                <span className="text-white/40  font-semibold mr-3">
-                  {itemsArray[9].content}
-                </span>
-              </div>
+              </a>
+              <a href="#section-6" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    6
+                  </div>
+                  <span className="text-white/40  mr-3">
+                    {itemsArray[11].content}
+                  </span>
+                </div>
+              </a>
+              <a href="#section-7" >
+                <div className="mt-10 pr-3 text-[12px]">
+                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
+                    7
+                  </div>
+                  <span className="text-white/40  mr-3">
+                    {itemsArray[13].content}
+                  </span>
+                </div>
+              </a>
             </div>
-            <div className="border mt-7 border-gray-500/20 rounded-2xl py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
+            <div className="border my-7 border-gray-500/20 rounded-2xl py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
               <div className="bg-black/90 rounded-xl py-6 px-3 text-center">
                 <i className="fa-regular fa-clock text-orange-600"></i>
                 <div className="text-white text-sm font-semibold">
@@ -954,12 +1027,26 @@ export default function DetailsBlog() {
               <div className="bg-black/90 rounded-xl px-8 py-6  text-center">
                 <i className="fa-solid fa-calendar text-orange-600"></i>
                 <div className="text-white text-sm font-semibold">
-                  {currentt.date}
+                  {newDate}
                 </div>
                 <div className="text-gray-400/80 text-sm mt-1">
                   تاريخ النشر{" "}
                 </div>
               </div>
+            </div>
+            <div className="text-white mt-7 text-center border-amber-600/50 border py-8 px-6 bg-amber-700/15 rounded-2xl">
+              <div className="text-xl p-3.5 mb-5 inline text-orange-500 bg-amber-600/25 rounded-2xl">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div className="font-semibold mb-2 mt-7">لا تفوّت جديدنا</div>
+              <div className="text-sm text-gray-300/80 mb-4">
+                اشترك للحصول على أحدث المقالات
+              </div>
+              <Link to="/blog">
+                <button className="text-white bg-orange-500 py-2.5 w-full  font-semibold rounded-xl">
+                  تصفح المزيد
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -983,7 +1070,7 @@ export default function DetailsBlog() {
                 </div>
               </div>
             </div>
-            <Link to="blog">
+            <Link to="/blog">
               <button
                 type="button"
                 className="text-orange-600 mb-10 group bg-transparent flex items-center gap-3 text-[16px] box-border  hover:-translate-y-0.5 cursor-pointer transition-all duration-300  shadow-xs font-medium leading-5 rounded-xl  px-5 py-3 "

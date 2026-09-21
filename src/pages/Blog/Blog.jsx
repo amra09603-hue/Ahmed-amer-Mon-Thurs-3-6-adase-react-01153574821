@@ -820,25 +820,25 @@ export default function Blog() {
                     className={`${
                       veiwMode === `list`
                         ? `flex flex-col md:flex-row items-stretch min-h-[220px]`
-                        : `flex flex-col hover:-translate-y-3 duration-300`
+                        : `flex flex-col h-full`
                     }`}
                     to={`/blog/${current.slug}`}
                   >
                     <div
-                      className={`relative  overflow-hidden  ${veiwMode === `list` ? "w-full md:w-1/3 h-60 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `w-full h-48 rounded-t-3xl`}`}
+                      className={`    ${veiwMode === `list` ? "w-full relative md:w-1/3 h-56 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `w-full relative h-52 shrink-0 overflow-hidden rounded-t-3xl`}`}
                     >
                       <img
                         className=" w-full h-full group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover "
                         src={current.image}
                         alt={current.slug}
                       />
-                      <div className="absolute top-5 right-5 bg-black text-white rounded-2xl py-1 px-3 text-[11px] font-semibold">
+                      <div className="absolute top-5 right-5 bg-black text-white rounded-2xl py-1 px-3 text-[11px] font-semibold backdrop-blur-md">
                         {current.category}
                       </div>
                     </div>
 
                     <div
-                      className={`p-6 flex flex-col justify-between bg-zinc-900/80  ${veiwMode === `list` ? "w-full md:w-2/3 rounded-l-3xl  " : `w-full  rounded-b-3xl`}`}
+                      className={`p-6 flex flex-col justify-between bg-zinc-900/80  ${veiwMode === `list` ? "w-full md:w-2/3 rounded-l-3xl  " : `w-full flex-1  rounded-b-3xl`}`}
                     >
                       <div className=" mb-3 text-[12px] text-gray-200/50">
                         <i className="fa-regular fa-clock ml-1"></i>

@@ -825,10 +825,10 @@ export default function Blog() {
                     to={`/blog/${current.slug}`}
                   >
                     <div
-                      className={`relative  overflow-hidden w-full ${veiwMode === `list` ? "md:w-1/3 h-56 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `h-48 rounded-t-3xl`}`}
+                      className={`relative  overflow-hidden  ${veiwMode === `list` ? "w-full md:w-1/3 h-60 md:h-auto shrink-0 overflow-hidden rounded-r-3xl " : `w-full h-48 rounded-t-3xl`}`}
                     >
                       <img
-                        className={`  group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover h-full ${veiwMode === `list` ? `rounded-r-3xl w-full` : `rounded-t-3xl w-full h-52`}`}
+                        className=" w-full h-full group-hover:shadow-2xl group-hover:scale-110 duration-500 object-cover "
                         src={current.image}
                         alt={current.slug}
                       />
@@ -838,7 +838,7 @@ export default function Blog() {
                     </div>
 
                     <div
-                      className={`p-6 flex flex-col justify-between bg-zinc-900/80  ${veiwMode === `list` ? "w-full rounded-l-3xl  " : `w-full md:w-2/3 rounded-b-3xl`}`}
+                      className={`p-6 flex flex-col justify-between bg-zinc-900/80  ${veiwMode === `list` ? "w-full md:w-2/3 rounded-l-3xl  " : `w-full  rounded-b-3xl`}`}
                     >
                       <div className=" mb-3 text-[12px] text-gray-200/50">
                         <i className="fa-regular fa-clock ml-1"></i>

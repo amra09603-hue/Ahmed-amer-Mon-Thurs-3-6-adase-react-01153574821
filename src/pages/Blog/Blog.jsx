@@ -838,7 +838,7 @@ export default function Blog() {
                     </div>
 
                     <div
-                      className={`sm:p-7 md:p-8 md:pb-10  lg:p-7 lg:pb-11 bg-zinc-900/80  ${veiwMode === `list` ? "rounded-l-3xl  w-[65%] h-48 " : `rounded-b-3xl`}`}
+                      className={`sm:p-7 md:p-8 md:pb-10  lg:p-7 lg:pb-11 bg-zinc-900/80  ${veiwMode === `list` ? "rounded-l-3xl  w-[69%] h-[200px] " : `rounded-b-3xl`}`}
                     >
                       <div className=" mb-3 text-[12px] text-gray-200/50">
                         <i className="fa-regular fa-clock ml-1"></i>

@@ -847,20 +847,7 @@ export default function DetailsBlog() {
                 {itemsArray[12].content}
               </div>
             </div>
-            <div>
-              <div className="text-3xl text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
-                <i className="fa-solid fa-camera"></i>
-              </div>
-              <span
-                id="section-7"
-                className="text-3xl scroll-mt-24 mr-5 font-semibold"
-              >
-                {itemsArray[13].content}
-              </span>
-              <div className="text-lg text-gray-300 mt-6 mb-14">
-                {itemsArray[14].content}
-              </div>
-            </div>
+            
             <div className="text-xl border border-gray-500/20 rounded-2xl p-7 bg-gray-700/20">
               <div className="text-lg p-2 text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-tags"></i>
@@ -1005,16 +992,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-7" >
-                <div className="mt-10 pr-3 text-[12px]">
-                  <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
-                    7
-                  </div>
-                  <span className="text-white/40  mr-3">
-                    {itemsArray[13].content}
-                  </span>
-                </div>
-              </a>
+              
             </div>
             <div className="border my-7 border-gray-500/20 rounded-2xl py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
               <div className="bg-black/90 rounded-xl py-6 px-3 text-center">
@@ -1036,7 +1014,7 @@ export default function DetailsBlog() {
             </div>
             <div className="text-white mt-7 text-center border-amber-600/50 border py-8 px-6 bg-amber-700/15 rounded-2xl">
               <div className="text-xl p-3.5 mb-5 inline text-orange-500 bg-amber-600/25 rounded-2xl">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
               </div>
               <div className="font-semibold mb-2 mt-7">لا تفوّت جديدنا</div>
               <div className="text-sm text-gray-300/80 mb-4">

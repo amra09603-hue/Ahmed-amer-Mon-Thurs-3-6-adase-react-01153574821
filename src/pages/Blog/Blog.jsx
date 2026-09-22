@@ -647,9 +647,9 @@ export default function Blog() {
   let { posts, categories, siteInfo } = data;
 
   window.scrollTo({
-    top:0,
-    behavior: "smooth"
-  })
+    top: 0,
+    behavior: "smooth",
+  });
   // Search input
   const [searchInput, setSearchInput] = useState(``);
 
@@ -682,7 +682,6 @@ export default function Blog() {
 
   let currentPages = filterPosts.slice(startPost, endPost);
   let totalPages = [1, 2, 3, 4, 5];
-
 
   //count
   let bigCurrentCount = categories.find(
@@ -803,6 +802,14 @@ export default function Blog() {
                 >
                   <i className=" fa-solid fa-bars"></i>
                 </button>
+                {activeCategory !== "جميع المقالات" && (
+                  <button
+                  type="button"
+                  onClick={() => setActiveCategory('جميع المقالات')}
+                  className="cursor-pointer ml-3 hover:text-white text-lg transition-colors duration-200  text-gray-400/90 p-1 rounded-lg">
+                    <span className="text-xl">X</span>مسح الفلاتر
+                  </button>
+                )}
               </div>
             </div>
             <div

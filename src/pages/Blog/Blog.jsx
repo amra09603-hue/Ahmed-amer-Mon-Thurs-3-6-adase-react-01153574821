@@ -720,7 +720,7 @@ export default function Blog() {
       <section className="relative w-full bg-neutral-950 pt-5 pb-14">
         <div className="absolute inset-0  bg-[radial-gradient(circle_800px_at_10%_200px,#f9731615,transparent)] pointer-events-none" />
         <div className="w-full xl:container relative mx-auto text-white  ">
-          <div className="flex items-center justify-between px-7">
+          <div className="flex items-center justify-between px-3 xl:px-7">
             <div>
               <div className="max-w-md mx-auto">
                 <div className="relative">
@@ -754,7 +754,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="mr-12">
               {categories.map((vir) => (
                 <button
                   type="button"

@@ -1009,7 +1009,7 @@ export default function Home() {
             <div className="flex justify-start items-center text-sm text-gray-600">
               {posts
                 .filter((current,index) => current.id < 4)
-                .map((current) => (
+                .map((current,index) => (
                   <img
                     id={index}
                     src={current.author.avatar}

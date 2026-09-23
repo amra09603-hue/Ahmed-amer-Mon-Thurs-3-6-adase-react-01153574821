@@ -795,9 +795,9 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-12 gap-7 px-16 text-center">
-            {posts.map(function (current) {
+            {posts.map(function (current,i) {
               return (
-                <div className="col-span-4 relative hover:border-amber-600 group bg-zinc-900/80 rounded-3xl p-6 border border-gray-400/20">
+                <div id={i} className="col-span-4 relative hover:border-amber-600 group bg-zinc-900/80 rounded-3xl p-6 border border-gray-400/20">
                   <img
                     src={current.author.avatar}
                     className="rounded-full inline border-4 group-hover:border-amber-700/70 border-gray-400/30"

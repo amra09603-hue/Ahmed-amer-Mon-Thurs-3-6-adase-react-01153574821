@@ -755,8 +755,9 @@ export default function Blog() {
               </div>
             </div>
             <div className="mr-12">
-              {categories.map((vir) => (
+              {categories.map((vir,index) => (
                 <button
+                  id={index}
                   type="button"
                   onClick={() => setActiveCategory(vir.name)}
                   className={` font-semibold rounded-xl ml-2 py-2 px-3 text-sm cursor-pointer border border-gray-500/30 hover:border-orange-600/50
@@ -821,9 +822,10 @@ export default function Blog() {
               }
               `}
             >
-              {currentPages.map((current) => (
-                <div className=" group  bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
+              {currentPages.map((current,index) => (
+                <div id={index} className=" group  bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
                   <Link
+
                     className={`${
                       veiwMode === `list`
                         ? `flex flex-col md:flex-row items-stretch min-h-[220px]`
@@ -893,9 +895,9 @@ export default function Blog() {
             <div className="text-gray-500/40 bg-gray-600/5 border border-gray-500/20 py-2 px-3 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer ">
               <i className="fa-solid fa-chevron-right"></i>
             </div>
-            {totalPages.map((pageNumber) => (
+            {totalPages.map((pageNumber,index) => (
               <button
-                key={pageNumber}
+                key={index}
                 onClick={() => setCurrentBage(pageNumber)}
                 className={` border font-semibold border-gray-500/20 py-2 px-4 rounded-xl hover:text-white hover:border-orange-400/50 cursor-pointer ${currentBage === pageNumber ? `text-white  bg-orange-500` : "text-gray-300/50 bg-gray-600/20"}`}
               >

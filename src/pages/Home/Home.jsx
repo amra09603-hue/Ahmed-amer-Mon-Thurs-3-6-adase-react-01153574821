@@ -751,8 +751,8 @@ export default function Home() {
 
           {posts
             .filter((current) => current.id < 4)
-            .map((current) => (
-              <Link to={`/blog/${current.slug}`}>
+            .map((current,index) => (
+              <Link id={index} to={`/blog/${current.slug}`}>
                 <div className="grid grid-cols-12 group hover:border hover:border-orange-600/30 rounded-3xl mb-10">
                   <div className="col-span-6 relative overflow-hidden  border border-gray-600/50 rounded-r-3xl ">
                     <img
@@ -923,8 +923,8 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-8">
             {posts
               .filter((current) => current.id > 3 && current.id <= 6)
-              .map((current) => (
-                <div className="col-span-4 group hover:-translate-y-3 duration-300 bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
+              .map((current,index) => (
+                <div id={index} className="col-span-4 group hover:-translate-y-3 duration-300 bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs">
                   <Link to={`/blog/${current.slug}`}>
                     <div className="relative w-full overflow-hidden rounded-t-3xl ">
                       <img
@@ -1008,9 +1008,10 @@ export default function Home() {
             </div>
             <div className="flex justify-start items-center text-sm text-gray-600">
               {posts
-                .filter((current) => current.id < 4)
+                .filter((current,index) => current.id < 4)
                 .map((current) => (
                   <img
+                    id={index}
                     src={current.author.avatar}
                     className="h-8 w-8 rounded-full"
                     alt={current.author.role}

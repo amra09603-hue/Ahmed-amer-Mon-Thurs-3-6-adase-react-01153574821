@@ -1062,8 +1062,9 @@ export default function DetailsBlog() {
           <div className="grid grid-cols-12 gap-5 ">
             {posts
               .filter((current) => current.id > 3 && current.id <= 6)
-              .map((current) => (
+              .map((current,i) => (
                 <div
+                  id={i}
                   onClick={(x) => render(x)}
                   className="col-span-4 group mb-10  bg-neutral-primary-soft block  border border-gray-500/20  rounded-3xl shadow-xs"
                 >

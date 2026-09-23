@@ -647,7 +647,6 @@ export default function DetailsBlog() {
   ]);
 
   const [sulgData, setSulgData] = useState({});
-
   let [data] = allData;
   let { posts, categories, siteInfo } = data;
 
@@ -655,7 +654,9 @@ export default function DetailsBlog() {
   const { slug } = useParams();
   let currentt = posts.find((item) => item.slug === slug);
   if (!currentt) {
-    <h1>المقال غير موجود</h1>;
+    return (
+    <h1 className="text-center text-5xl">المقال غير موجود</h1>
+    )
   }
 
   window.scrollTo({
@@ -670,7 +671,7 @@ export default function DetailsBlog() {
   }
 
   // text
-  let text = currentt.content;
+  let text = currentt?.content || "";
   const itemsArray = text
     .split(/\r?\n\r?\n/)
     .map((item) => item.trim())

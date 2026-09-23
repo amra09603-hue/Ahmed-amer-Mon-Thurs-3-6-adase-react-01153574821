@@ -652,11 +652,9 @@ export default function DetailsBlog() {
 
   // dynamic url and currentt obj back from url
   const { slug } = useParams();
-  let currentt = posts.find((item) => item.slug === slug);
+  let currentt = posts?.find((item) => item.slug === slug);
   if (!currentt) {
-    return (
-    <h1 className="text-center text-5xl">المقال غير موجود</h1>
-    )
+    return <h1 className="text-center text-5xl my-10">المقال غير موجود</h1>;
   }
 
   window.scrollTo({
@@ -848,7 +846,7 @@ export default function DetailsBlog() {
                 {itemsArray[12].content}
               </div>
             </div>
-            
+
             <div className="text-xl border border-gray-500/20 rounded-2xl p-7 bg-gray-700/20">
               <div className="text-lg p-2 text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-tags"></i>
@@ -933,7 +931,7 @@ export default function DetailsBlog() {
               <span className="text-white  font-semibold mr-3">
                 محتويات المقال
               </span>
-              <a href="#section-1" >
+              <a href="#section-1">
                 <div className="mt-12 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     1
@@ -943,7 +941,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-2" >
+              <a href="#section-2">
                 <div className="mt-10 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     2
@@ -953,7 +951,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-3" >
+              <a href="#section-3">
                 <div className="mt-10 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     3
@@ -963,7 +961,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-4" >
+              <a href="#section-4">
                 <div className="mt-10 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     4
@@ -973,7 +971,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-5" >
+              <a href="#section-5">
                 <div className="mt-10 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     5
@@ -983,7 +981,7 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              <a href="#section-6" >
+              <a href="#section-6">
                 <div className="mt-10 pr-3 text-[12px]">
                   <div className=" py-0.5 px-2 text-gray-400  bg-gray-600/10 border border-gray-500/50 rounded-lg inline">
                     6
@@ -993,7 +991,6 @@ export default function DetailsBlog() {
                   </span>
                 </div>
               </a>
-              
             </div>
             <div className="border my-7 border-gray-500/20 rounded-2xl py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
               <div className="bg-black/90 rounded-xl py-6 px-3 text-center">

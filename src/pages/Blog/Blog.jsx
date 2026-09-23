@@ -719,7 +719,7 @@ export default function Blog() {
       {/*  display data section */}
       <section className="relative w-full bg-neutral-950 pt-5 pb-14">
         <div className="absolute inset-0  bg-[radial-gradient(circle_800px_at_10%_200px,#f9731615,transparent)] pointer-events-none" />
-        <div className="container relative mx-auto text-white  ">
+        <div className="w-full xl:container relative mx-auto text-white  ">
           <div className="flex items-center justify-between px-7">
             <div>
               <div className="max-w-md mx-auto">

@@ -15,7 +15,7 @@ export default function DetailsBlog() {
           excerpt:
             "تعلم كيفية التقاط صور مذهلة خلال الساعة الذهبية مع نصائح احترافية حول الإضاءة والتكوين.",
           content:
-            "الساعة الذهبية هي أكثر الأوقات سحراً للتصوير الفوتوغرافي. ذلك الوقت القصير بعد شروق الشمس وقبل غروبها حيث يكون الضوء ناعماً ودافئاً وساحراً.\n\n## لماذا الساعة الذهبية؟\n\nالضوء خلال هذا الوقت له صفات فريدة: ظلال طويلة ناعمة، ألوان دافئة ذهبية، وتباين منخفض يجعل كل شيء يبدو أجمل. البورتريهات تكتسب توهجاً طبيعياً والمناظر الطبيعية تتحول إلى لوحات فنية.\n\n## التحضير المسبق\n\nخطط لجلسة التصوير مسبقاً. استخدم تطبيقات مثل PhotoPills لمعرفة وقت الساعة الذهبية بدقة في موقعك. وصل قبل 30 دقيقة لاختيار أفضل زاوية.\n\n## إعدادات الكاميرا\n\nاستخدم ISO منخفض للحصول على أقل ضوضاء. فتحة العدسة تعتمد على ما تريد: f/1.8-f/2.8 للبورتريهات مع خلفية ضبابية، أو f/8-f/11 للمناظر الطبيعية الحادة.\n\n## التكوين الفني\n\nضع الشمس خلف موضوعك للحصول على تأثير الإضاءة الخلفية الساحر. أو استخدمها كمصدر جانبي لإبراز الملمس والعمق.\n\n## الخلاصة\n\nالساعة الذهبية هي هدية للمصورين. استغلها جيداً وستحصل على صور لا تُنسى تتميز بجمالها الطبيعي.",
+            "الساعة الذهبية هي أكثر الأوقات سحراً للتصوير الفوتوغرافي. ذلك الوقت القصير بعد شروق الشمس وقبل غروبها حيث يكون الضوء ناعماً ودافئاً.\n\n## لماذا الساعة الذهبية؟\n\nالضوء خلال هذا الوقت له صفات فريدة: ظلال طويلة ناعمة، ألوان دافئة ذهبية، وتباين منخفض يجعل كل شيء يبدو أجمل. البورتريهات تكتسب توهجاً طبيعياً والمناظر الطبيعية تتحول إلى لوحات فنية.\n\n## التحضير المسبق\n\nخطط لجلسة التصوير مسبقاً. استخدم تطبيقات مثل PhotoPills لمعرفة وقت الساعة الذهبية بدقة في موقعك. وصل قبل 30 دقيقة لاختيار أفضل زاوية.\n\n## إعدادات الكاميرا\n\nاستخدم ISO منخفض للحصول على أقل ضوضاء. فتحة العدسة تعتمد على ما تريد: f/1.8-f/2.8 للبورتريهات مع خلفية ضبابية، أو f/8-f/11 للمناظر الطبيعية الحادة.\n\n## التكوين الفني\n\nضع الشمس خلف موضوعك للحصول على تأثير الإضاءة الخلفية الساحر. أو استخدمها كمصدر جانبي لإبراز الملمس والعمق.\n\n## الخلاصة\n\nالساعة الذهبية هي هدية للمصورين. استغلها جيداً وستحصل على صور لا تُنسى تتميز بجمالها الطبيعي.",
           category: "إضاءة",
           author: {
             name: "سالم أحمد",
@@ -712,7 +712,6 @@ export default function DetailsBlog() {
           backgroundSize: `cover`,
           backgroundPosition: `center`,
           backgroundRepeat: `no-repeat`,
-          height: `525px`,
           width: `100%`,
         }}
       >
@@ -924,7 +923,7 @@ export default function DetailsBlog() {
             </div>
           </div>
           <div className="col-span-3 sticky top-24 self-start">
-            <div className="border border-gray-500/20 rounded-2xl p-7 bg-gray-700/20">
+            <div className="border border-gray-500/20 rounded-2xl p-2 xl:p-7 bg-gray-700/20">
               <div className=" p-2 text-orange-500  bg-amber-600/10 border border-amber-500/50 rounded-xl inline">
                 <i className="fa-solid fa-list"></i>
               </div>
@@ -992,7 +991,7 @@ export default function DetailsBlog() {
                 </div>
               </a>
             </div>
-            <div className="border my-7 border-gray-500/20 rounded-2xl py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
+            <div className="border my-7 border-gray-500/20 rounded-2xl p-2 xl:py-7 px-2 bg-gray-700/20 flex items-center justify-center gap-2">
               <div className="bg-black/90 rounded-xl py-6 px-3 text-center">
                 <i className="fa-regular fa-clock text-orange-600"></i>
                 <div className="text-white text-sm font-semibold">
@@ -1010,7 +1009,7 @@ export default function DetailsBlog() {
                 </div>
               </div>
             </div>
-            <div className="text-white mt-7 text-center border-amber-600/50 border py-8 px-6 bg-amber-700/15 rounded-2xl">
+            <div className="text-white mt-7 text-center border-amber-600/50 border py-2 xl:py-8 px-6 bg-amber-700/15 rounded-2xl">
               <div className="text-xl p-3.5 mb-5 inline text-orange-500 bg-amber-600/25 rounded-2xl">
                 <i className="fa-solid fa-envelope"></i>
               </div>
